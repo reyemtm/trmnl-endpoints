@@ -2,6 +2,8 @@
 
 A collection of focused endpoint functions for trmnl display plugins.
 
+> https://trmnl.getbounds.dev
+
 ## Packages
 
 - [`@endpoints/nws-forecast`](./packages/nws-forecast) - National Weather Service forecast data wrapper
