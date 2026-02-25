@@ -5,7 +5,7 @@ Simple weather forecast endpoint. Takes latitude and longitude coordinates as an
 ## Installation
 
 ```bash
-npm install github:reyemtm/endpoints#subdirectory=packages/nws-forecast
+npm install github:reyemtm/trmnl-endpoints#subdirectory=packages/nws-forecast
 ```
 
 ## Usage
@@ -41,7 +41,7 @@ console.log(forecast.trend);       // Formatted for charting
 
 ## Related Endpoints
 
-Part of the [@endpoints](https://github.com/reyemtm/endpoints) collection - simple lambda-type functions that take 1 input and return focused data.
+Part of the [@endpoints](https://github.com/reyemtm/trmnl-endpoints) collection - simple lambda-type functions that take 1 input and return focused data.
 
 ## Sample Response
 
