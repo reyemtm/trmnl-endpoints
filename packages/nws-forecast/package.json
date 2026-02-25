@@ -1,0 +1,23 @@
+{
+  "name": "@endpoints/nws-forecast",
+  "version": "1.0.0",
+  "description": "NWS Weather Forecast API wrapper - takes lat/lng, returns weather endpoint data",
+  "main": "index.js",
+  "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "weather",
+    "nws",
+    "forecast",
+    "endpoint",
+    "lambda",
+    "trmnl"
+  ],
+  "author": "Malcolm Meyer",
+  "license": "MIT"
+}
