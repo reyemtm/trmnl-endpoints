@@ -1,0 +1,17 @@
+{
+  "name": "trmnl-endpoints",
+  "version": "1.0.0",
+  "description": "Collection of focused endpoint functions for fetching and formatting data from various APIs, originally created for trmnl plugins but can be used in any JavaScript project.",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "author": "Malcolm Meyer",
+  "keywords": [
+    "trmnl",
+    "trmnl plugins",
+    "endpoints",
+    "API"
+  ],
+  "license": "MIT"
+}
