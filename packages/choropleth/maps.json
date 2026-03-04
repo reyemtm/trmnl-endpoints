@@ -1,0 +1,107 @@
+[
+  {
+    "field": "B17001002",
+    "title": "Poverty Rate",
+    "info": "Income in the past 12 months below poverty level"
+  },
+  {
+    "field": "B19013001",
+    "title": "Median Income",
+    "info": "Median household income in the past 12 months"
+  },
+  {
+    "field": "B23025005",
+    "title": "Unemployment Rate",
+    "info": "In labor force - Unemployment"
+  },
+  {
+    "field": "B01003001",
+    "title": "Total Population",
+    "info": "Total population (use with any numerator for % of total)"
+  },
+  {
+    "field": "B01001002",
+    "title": "Male Population Pct",
+    "info": "Percentage of population that is male"
+  },
+  {
+    "field": "B01001026",
+    "title": "Female Population Pct",
+    "info": "Percentage of population that is female"
+  },
+  {
+    "field": "B15003022",
+    "title": "Bachelor's Degree",
+    "info": "Bachelor's degree or higher"
+  },
+  {
+    "field": "B25004002",
+    "title": "Renter Occupied",
+    "info": "Percentage of occupied housing units that are renter-occupied"
+  },
+  {
+    "field": "B25003002",
+    "title": "Renter Occupied Housing",
+    "info": "Renter-occupied housing units"
+  },
+  {
+    "field": "B06009002",
+    "title": "Bachelors or Higher",
+    "info": "Population 25+ with bachelor's degree or higher"
+  },
+  {
+    "field": "B23025002",
+    "title": "Labor Force Participation",
+    "info": "Civilian labor force"
+  },
+  {
+    "field": "B16001003",
+    "title": "Age 5+ Speaks English Only",
+    "info": "Population age 5+ speaking only English"
+  },
+  {
+    "field": "B02001002",
+    "title": "White Population",
+    "info": "White alone population"
+  },
+  {
+    "field": "B02001003",
+    "title": "Black Population",
+    "info": "Black or African American alone population"
+  },
+  {
+    "field": "B02001005",
+    "title": "Asian Population",
+    "info": "Asian alone population"
+  },
+  {
+    "field": "B03003003",
+    "title": "Hispanic or Latino",
+    "info": "Hispanic or Latino population"
+  },
+  {
+    "field": "B25077001",
+    "title": "Median Home Value",
+    "info": "Median value of owner-occupied housing units"
+  },
+  {
+    "field": "B25064001",
+    "title": "Median Rent",
+    "info": "Median contract rent"
+  },
+  {
+    "field": "B08006001",
+    "title": "Total Workers",
+    "info": "Total workers 16+, commute to work"
+  },
+  {
+    "field": "B08006009",
+    "title": "Drive Alone",
+    "info": "Drove alone to work"
+  },
+  {
+    "field": "B08006037",
+    "title": "Public Transit",
+    "info": "Public transportation to work"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "name": "choropleth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "canvas": "^3.2.1",
+    "d3": "^7.9.0",
+    "sharp": "^0.34.5",
+    "simple-statistics": "^7.8.8",
+    "topojson-client": "^3.1.0"
+  }
+}
