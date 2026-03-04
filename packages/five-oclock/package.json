@@ -1,5 +1,5 @@
 {
-  "name": "five-oclock",
+  "name": "@endpoints/five-oclock",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
