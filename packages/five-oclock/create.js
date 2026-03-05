@@ -1,10 +1,11 @@
 import { geoNaturalEarth1, geoPath } from "d3-geo";
 
 import { createCanvas } from "canvas";
+import { createRequire } from "module";
 import generateCities from "./cities.js";
-import { readFileSync } from "fs";
 
-const worldGeoJSON = JSON.parse(readFileSync(new URL("./world-110m.geojson", import.meta.url)));
+const require = createRequire(import.meta.url);
+const worldGeoJSON = require("./world-110m.geojson");
 
 const { cities, drinks } = generateCities();
 

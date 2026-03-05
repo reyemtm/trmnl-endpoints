@@ -8,5 +8,7 @@ yarn-error.log*
 .env.local
 packages/*/node_modules/
 packages/*/dist/
+!packages/five-oclock/dist/
+!packages/five-oclock/dist/**
 packages/*/temp/*
 packages/*/maps/*
