@@ -2,7 +2,7 @@ import { geoNaturalEarth1, geoPath } from "d3-geo";
 
 import { createRequire } from "module";
 import generateCities from "./cities.js";
-import worldGeoJSON from "./world-110m.geojson";
+import worldGeoJSON from "./world-110m.json" with { type: "json" };
 
 const require = createRequire(import.meta.url);
 
@@ -142,6 +142,7 @@ function generateFiveOClock() {
 
     return {
       ...city,
+      localMinutes,
       minutesUntil: until,
       distanceFromFive: Math.min(until, 1440 - until)
     };
@@ -151,26 +152,16 @@ function generateFiveOClock() {
     (a, b) => a.distanceFromFive - b.distanceFromFive
   );
 
-  const currentChoices = sorted.slice(0, 5);
-  //check if we can keep the same city as current
-  if (state.current) {
-    const stillCurrent = currentChoices.find(c => c.name === state.current.name);
-    if (stillCurrent) {
-      //new min until old next
-      const untilNext = minutesUntilFive(getLocalMinutes(now, state.next.timeZone));
-      return {
-        ...state.current,
-        localTime: getLocalTimeString(now, state.current.timeZone),
-        utc: now.toISOString(),
-        nextPlace: state.next.name,
-        nextCountry: state.next.country,
-        minutesUntilNext: untilNext,
-        img: generateMapImage(state.current)
-      };
-    }
-  }
+  // Find cities between 5 PM and 6 PM
+  const fivePMWindow = enriched.filter(city =>
+    city.localMinutes >= 1020 && city.localMinutes < 1080
+  );
 
-  const current = currentChoices[Math.floor(Math.random() * currentChoices.length)];
+  // Randomly pick from the window, or fall back to closest to 5 PM
+  const hasError = fivePMWindow.length === 0;
+  const current = fivePMWindow.length > 0
+    ? fivePMWindow[Math.floor(Math.random() * fivePMWindow.length)]
+    : sorted[0];
 
   const next = [...enriched]
     .filter(c => c.minutesUntil > 0)
@@ -180,6 +171,7 @@ function generateFiveOClock() {
   state.next = next;
 
   return {
+    error: hasError,
     place: current.name,
     country: current.country,
     localDrink: current.drink,

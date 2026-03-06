@@ -12,7 +12,9 @@
   "files": [
     "index.js",
     "create.js",
-    "scripts"
+    "scripts",
+    "cities.js",
+    "world-110m.json"
   ],
   "scripts": {
     "test": "node test.js",
