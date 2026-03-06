@@ -1,15 +1,27 @@
 import { geoNaturalEarth1, geoPath } from "d3-geo";
 
-import { createCanvas } from "canvas";
 import { createRequire } from "module";
 import generateCities from "./cities.js";
+import worldGeoJSON from "./world-110m.geojson";
 
 const require = createRequire(import.meta.url);
-const worldGeoJSON = require("./world-110m.geojson");
+
+function getCanvasCreator() {
+  try {
+    return require("canvas").createCanvas;
+  } catch {
+    return null;
+  }
+}
 
 const { cities, drinks } = generateCities();
 
 function generateMapImage(city) {
+  const createCanvas = getCanvasCreator();
+  if (!createCanvas) {
+    return null;
+  }
+
   const width = 400;
   const height = 240;
 

@@ -2,17 +2,19 @@
   "name": "@endpoints/five-oclock",
   "version": "1.0.0",
   "description": "Five o'clock endpoint generator",
+  "private": true,
   "type": "module",
-  "main": "./dist/index.js",
+  "main": "./index.js",
   "exports": {
-    ".": "./dist/index.js"
+    ".": "./index.js",
+    "./create": "./create.js"
   },
   "files": [
-    "dist"
+    "index.js",
+    "create.js",
+    "scripts"
   ],
   "scripts": {
-    "clean": "rm -rf dist",
-    "build": "node ./scripts/build.mjs",
     "test": "node test.js",
     "start": "node index.js",
     "dev": "nodemon index.js"
@@ -22,10 +24,6 @@
     "d3-geo": "^3.1.1"
   },
   "devDependencies": {
-    "esbuild": "^0.25.1",
     "nodemon": "^3.1.9"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT"
+  }
 }
